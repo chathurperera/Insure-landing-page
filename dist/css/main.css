@@ -1,1 +1,249 @@
-/* No CSS */
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+}
+
+.cta {
+  padding: .5rem 1rem;
+  background: transparent;
+  text-transform: uppercase;
+  border: 1px solid  black;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+nav {
+  background: #fff;
+}
+
+nav .nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+nav .nav-container .mob-nav {
+  border: 1px solid #2d2640;
+  height: 33px;
+  width: 33px;
+}
+
+nav .nav-container .mob-nav span {
+  width: 20px;
+  height: 2px;
+  background: #2d2640;
+}
+
+nav .nav-container .nav-wrap {
+  display: none;
+  width: 35%;
+}
+
+nav .nav-container .nav-wrap ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+nav .nav-container .nav-wrap ul li a {
+  text-transform: uppercase;
+  color: #837d87;
+  text-decoration: none;
+}
+
+nav .nav-container .nav-wrap ul li a:hover {
+  color: #2d2640;
+  font-weight: 700;
+}
+
+nav .nav-container .nav-wrap ul li button {
+  text-transform: uppercase;
+  border: 2px solid #2d2640;
+  color: #2d2640;
+}
+
+nav .nav-container .nav-wrap ul li button:hover {
+  background: #2d2640;
+  color: #fff;
+}
+
+header {
+  background: #2d2640;
+  color: #fff;
+}
+
+header section .col1 .hero-img {
+  width: 100%;
+}
+
+header section .col1 .hero-img img {
+  width: 100%;
+}
+
+header section .col2 {
+  position: relative;
+  height: 500px;
+}
+
+header section .col2 .bg-intro-left, header section .col2 .bg-intro-right {
+  display: block;
+  position: absolute;
+  z-index: 1;
+}
+
+header section .col2 .bg-intro-right {
+  bottom: -30%;
+  right: 0;
+}
+
+header section .col2 .col2-content {
+  position: relative;
+  z-index: 999;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header section .col2 .col2-content hr {
+  display: none;
+}
+
+header section .col2 .col2-content .main-title {
+  font-family: "DM Serif Display", serif;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+header section .col2 .col2-content p {
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+header section .col2 .col2-content button {
+  margin-top: 3rem;
+  border: 1px solid #fff;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+main {
+  background: #fff;
+  margin-bottom: 5rem;
+}
+
+main section {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+main section hr {
+  margin: 1rem auto;
+  width: 30%;
+  height: 2px;
+  color: #2d2640;
+}
+
+main section h2 {
+  font-family: "DM Serif Display", serif;
+  color: #2b272f;
+  font-size: 2.5rem;
+  font-weight: 400;
+  padding: 1rem 0rem;
+}
+
+main section .feature-wrap .feature-col {
+  margin: 2rem 0rem;
+}
+
+main section .feature-wrap .feature-col h3 {
+  color: #2b272f;
+  font-family: "DM Serif Display", serif;
+  font-size: 1.5rem;
+  padding: .8rem 0rem;
+}
+
+main .cta-section {
+  background: #2d2640;
+  position: relative;
+}
+
+main .cta-section .bg-cta {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+main .cta-section h2 {
+  position: relative;
+  color: #fff;
+  z-index: 2;
+}
+
+main .cta-section button {
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+main .cta-section button:hover {
+  background: #fff;
+  color: #2d2640;
+}
+
+footer {
+  position: relative;
+}
+
+footer .footer-bg {
+  position: absolute;
+  z-index: 1;
+}
+
+footer section {
+  position: relative;
+  z-index: 999;
+  text-align: center;
+}
+
+footer section address {
+  height: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+footer section hr {
+  color: #837d87;
+}
+
+footer section .footer-content {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+footer section .footer-content .col p {
+  color: #2d2640;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: .8rem;
+}
+
+footer section .footer-content .col .col-title {
+  font-size: large;
+  color: #837d87;
+  padding: 1rem 0rem;
+}
