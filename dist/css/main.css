@@ -31,49 +31,81 @@ nav .nav-container {
   padding: 1rem;
 }
 
-nav .nav-container .mob-nav {
+nav .nav-container .hamburger {
   border: 1px solid #2d2640;
   height: 33px;
   width: 33px;
+  display: block;
+  cursor: pointer;
 }
 
-nav .nav-container .mob-nav span {
-  width: 20px;
+nav .nav-container .hamburger span {
+  display: block;
+  width: 16px;
   height: 2px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
   background: #2d2640;
 }
 
-nav .nav-container .nav-wrap {
-  display: none;
-  width: 35%;
+nav .nav-container .hamburger .active span:nth-child(2) {
+  opacity: 0;
 }
 
-nav .nav-container .nav-wrap ul {
+nav .nav-container .hamburger .active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+nav .nav-container .hamburger .active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+nav .nav-container ul {
+  position: fixed;
+  left: -100%;
+  top: 4rem;
+  background: #2b272f;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
+  height: 100%;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  color: #fff;
 }
 
-nav .nav-container .nav-wrap ul li a {
+nav .nav-container ul.active {
+  left: 0;
+  z-index: 9999999;
+}
+
+nav .nav-container ul.active button {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+nav .nav-container ul li {
+  list-style: none;
+  margin: 2rem 0;
+}
+
+nav .nav-container ul li a {
   text-transform: uppercase;
   color: #837d87;
   text-decoration: none;
 }
 
-nav .nav-container .nav-wrap ul li a:hover {
+nav .nav-container ul li a:hover {
   color: #2d2640;
   font-weight: 700;
 }
 
-nav .nav-container .nav-wrap ul li button {
+nav .nav-container ul li button {
   text-transform: uppercase;
   border: 2px solid #2d2640;
   color: #2d2640;
 }
 
-nav .nav-container .nav-wrap ul li button:hover {
+nav .nav-container ul li button:hover {
   background: #2d2640;
   color: #fff;
 }

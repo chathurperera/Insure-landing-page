@@ -27,27 +27,68 @@ nav{
         align-items: center;
         padding: 1rem ;
 
-        .mob-nav{
+        .hamburger{
             border: 1px solid $DarkViolet;
             height: 33px;
             width: 33px;
-
+            display: block;
+            cursor: pointer;
+            
             span{
-                width: 20px;
+                display: block;
+                width: 16px;
                 height: 2px;
+                margin: 5px auto;
+                -webkit-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
                 background: $DarkViolet;
             }
+            .active{
+                span:nth-child(2){
+                    opacity: 0;
+                }
+                span:nth-child(1){
+                    transform: translateY(8px) rotate(45deg);
+                }
+                span:nth-child(3){
+                    transform: translateY(-8px) rotate(-45deg);
+                }
+            }
+
         }
-        .nav-wrap{
-            display:none;   //is hidden untill the mobile design is over
-            width: 35%;
+            
             ul{
+                // display:none;   //is hidden untill the mobile design is over
+                // width: 35%;
+                // display: flex;
+                // justify-content: space-between;
+                // align-items: center;
+                // list-style: none;
+                position: fixed;
+                left: -100%;
+                top: 4rem;
+                background: $Very-Dark-Violet;
                 width: 100%;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                list-style: none;
+                height: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+                color: #fff;
+                &.active{
+                    left: 0;
+                    z-index: 9999999;
+
+                }
+                &.active{
+                    button{
+                        border: 1px solid #fff;
+                        color: #fff;
+                    }
+                }
+                
                 li{
+                    list-style: none;
+                    margin: 2rem 0;
                     a{
                         text-transform: uppercase;
                         color:$Dark-Grayish-Violet;
@@ -70,7 +111,7 @@ nav{
 
                 }
             }
-        }
+        
     }
 }
 
